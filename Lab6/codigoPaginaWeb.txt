@@ -1,0 +1,87 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="WebApplication2.WebForm3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title></title>
+<style>
+  h1 {
+      text-align: center;
+      color: #84c754;
+  }
+  body {
+      background-color: #333;
+      font-family: sans-serif;
+  }
+  label {
+      font-size: 18px;
+      color: #84c754;
+  }
+  input[type="text"], select, textarea {
+      color: #84c754;
+      background-color: #222;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 15px;
+      width: 100%;
+      box-sizing: border-box; 
+  }
+  input[type="radio"] {
+      margin-right: 5px;
+  }
+  .form-group {
+      margin-bottom: 20px;
+  }
+  .form-group label {
+      display: block;
+      margin-bottom: 5px; 
+  }
+  .enviar-btn {
+    background-color: #84c754;
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .enviar-btn:hover {
+    background-color: #222;
+    color: #84c754;
+  }
+</style>
+</head>
+<body>
+    <h1>Registro de estudiantes: </h1>
+    <form id="form1" runat="server">
+    <div>
+        
+    <label for="nombre">Nombre:</label>
+    <asp:TextBox runat="server" id="nombre" type="text"/><br />
+    <label for="apellido">Apellido:</label>
+    <asp:TextBox runat="server" id="apellido" type="text"/><br />
+    <label for="sexo">Sexo:</label>
+    <asp:RadioButton ID="sexoF" name="sexo" value="Femenino" text ="Femenino" runat="server" />
+    <asp:RadioButton ID="sexoM" name="sexo" value="Masculino" text ="Masculino" runat="server" /><br /> <br />
+    <label for="email"> Email:</label>
+    <asp:TextBox runat="server" id="email" type="text"/><br />
+    <label for="direccion"> Direccion:</label>
+    <asp:TextBox runat="server" id="direccion" type="text"/>
+    <select id="ciudad" name="ciudad" runat="server">
+        <option value="">Seleccione una ciudad</option>
+    </select><br />
+    <label for="requerimiento">Requerimiento:</label><br />
+    <textarea id="requerimiento" rows="5" cols="30" runat="server"></textarea><br />
+    <asp:Button runat="server" ID="btnEnviar" Text="Enviar" OnClick="Save" CssClass="enviar-btn" />
+    <asp:Button runat="server" ID="btnLimpiar" Text="Limpiar" OnClick="Limpiar_Click" CssClass="enviar-btn" />
+    <textarea runat="server" id="resultado" rows="10" cols="50" style="display: none;" readonly></textarea>
+    </div>
+    </form>
+    
+</body>
+
+</html>

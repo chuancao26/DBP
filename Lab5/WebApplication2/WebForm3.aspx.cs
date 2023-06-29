@@ -5,25 +5,41 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication2.ServiceReference1;
 
 namespace WebApplication2
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void addDropDownCiudades()
         {
-            if (!IsPostBack)
-            {
-                string filePath = Server.MapPath("~/ciudades.txt");
-                string[] ciudades = File.ReadAllLines(filePath);
+            //string filePath = Server.MapPath("~/ciudades.txt");
+            string[] ciudades = serviceCall();
 
-                foreach (string ciuda in ciudades)
-                {
-                    ListItem item = new ListItem(ciuda, ciuda);
-                    ciudad.Items.Add(item);
-                }
+            foreach (string ciuda in ciudades)
+            {
+                ListItem item = new ListItem(ciuda, ciuda);
+                ciudad.Items.Add(item);
             }
         }
+        protected String[] serviceCall()
+        {
+            Service1Client client = new Service1Client();
+            string[] ciudades = client.getCiudades();
+            return ciudades;
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            addDropDownCiudades(); 
+        }
+
+
+
+
+
+
+
+
 
         protected void Save(object sender, EventArgs e)
         {
