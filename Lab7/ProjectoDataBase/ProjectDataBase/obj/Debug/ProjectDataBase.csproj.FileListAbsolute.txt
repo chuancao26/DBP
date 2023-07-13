@@ -1,0 +1,8 @@
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\obj\Debug\ProjectDataBase.csproj.AssemblyReference.cache
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\obj\Debug\ProjectDataBase.csproj.SuggestedBindingRedirects.cache
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\obj\Debug\ProjectDataBase.csproj.CoreCompileInputs.cache
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\bin\Debug\ProjectDataBase.exe.config
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\bin\Debug\ProjectDataBase.exe
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\bin\Debug\ProjectDataBase.pdb
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\obj\Debug\ProjectDataBase.exe
+F:\UNSA 2023\DBP\Lab7\ProjectoDataBase\ProjectDataBase\obj\Debug\ProjectDataBase.pdb
