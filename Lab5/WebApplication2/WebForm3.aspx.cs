@@ -87,6 +87,9 @@ namespace WebApplication2
             resultado.Style["display"] = "block";
             Service1Client client = new Service1Client();
             client.insertRecord(nombreValue, apellidoValue, sexoValue, emailValue, direccionValue, ciudadValue, requerimientoValue);
+            createSesion(nombreValue, apellidoValue);
+            createCookie(sexoValue, ciudadValue);
+
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El formulario ha sido enviado exitosamente. Fecha y hora: " + currentDate + "');", true);
             //limpiar();
         }
@@ -106,6 +109,21 @@ namespace WebApplication2
         protected void Limpiar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+        private void createSesion(String nombre, String apellido)
+        {
+            Session["Nombre"] = nombre;
+            Session["Apellido"] = apellido;
+        }
+
+        //creacion de las cookies
+        private void createCookie(String sexo, String ciudad)
+        {
+            HttpCookie cookie1 = new HttpCookie("sexo", sexo);
+            HttpCookie cookie2 = new HttpCookie("ciudad", ciudad);
+            Response.Cookies.Add(cookie1);
+            Response.Cookies.Add(cookie2);
+
         }
     }
 }
