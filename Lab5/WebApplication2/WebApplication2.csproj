@@ -79,7 +79,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Auxiliar.aspx" />
     <Content Include="WebForm3.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -89,12 +89,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Auxiliar.aspx.cs">
+      <DependentUpon>Auxiliar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Auxiliar.aspx.designer.cs">
+      <DependentUpon>Auxiliar.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm3.aspx.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
